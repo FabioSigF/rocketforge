@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #fff /*black-600-p*/;
+  background-color: #030308;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+a,
+button {
+  text-decoration: none;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+button {
+  transition: all 250ms;
+}
+button:hover {
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+button.button-primary {
+  background-size: 200% auto;
+}
+
+button.button-primary:hover {
+  background-position: right center;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
