@@ -23,7 +23,7 @@ const Button = ({
     <button
       type={type ? type : "submit"}
       className={`
-      flex items-center gap-4 rounded-md shadow-lg justify-center py-2 px-6 font-bold button-primary
+      flex items-center gap-4 rounded-md shadow-lg justify-center py-2 h-[48px] font-bold button-primary text-title
       ${extraCSS && extraCSS}
       ${color ? color : "text-white"}
       ${

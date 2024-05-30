@@ -38,14 +38,6 @@ button:hover {
   transition: all 250ms;
 }
 
-button.button-primary {
-  background-size: 200% auto;
-}
-
-button.button-primary:hover {
-  background-position: right center;
-}
-
 ul,
 li {
   list-style: none;
@@ -53,4 +45,10 @@ li {
 
 input {
   outline: none;
+}
+
+.text-gradient {
+  background: linear-gradient(to bottom, white 50%, #999999 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }

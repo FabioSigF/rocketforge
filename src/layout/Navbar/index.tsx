@@ -5,7 +5,7 @@ import {
   IoLogoLinkedin,
   IoLogoWhatsapp,
 } from "react-icons/io5";
-import Container from "../Container";
+import Container from "../../components/Container";
 
 const Navbar = () => {
   const navItems = [
@@ -49,7 +49,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <header className="w-full h-[100px] flex items-center">
+    <header className="w-full h-[80px] flex items-center border-b border-gray-600 backdrop-blur-xl bg-bg_dark bg-opacity-20 fixed z-50">
       <Container>
         <nav className="flex items-center justify-between gap-8 h-full">
           <Logo />
