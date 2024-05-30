@@ -15,6 +15,7 @@ import {
 //Images
 import serviceImg1 from "../../assets/services_card_1.png";
 import serviceImg2 from "../../assets/services_card_2.jpg";
+import { useAppSelector } from "../../redux/store";
 
 const Services = () => {
   const servicestext = [
@@ -68,39 +69,49 @@ const Services = () => {
     },
   ];
 
+  const {isMobile} = useAppSelector((state) => state.deviceSize)
+
   return (
     <div>
       <Section>
         <Container>
-          <Title
-            section="Serviços"
-            title="Funcionalidades que irão destacar o seu negócio"
-            text="Em um ambiente tão competitivo como a internet, ter uma estratégia que destaque o seu negócio no ambiente digital é fundamental."
-            width="max-w-[500px]"
-          />
-          <ul className="grid grid-cols-4 grid-rows-2 gap-8 mt-16">
-            {servicestext.map((item, key) => (
-              <li key={key} className={`${item.colSize} ${item.rowSize}`}>
-                <CardTransparent extraCSS="rounded-lg overflow-hidden h-full">
-                  <div
-                    className={`flex py-8 px-6 items-start gap-10 justify-between h-full ${
-                      item.rowSize != "row-span-1" ? "flex-col" : "flex-row"
-                    }`}
-                  >
-                    <div className="flex flex-col items-start gap-4">
-                      <div className="bg-bg_dark p-4 rounded-lg text-xl">
-                        {item.icon}
+          <div className="max-sm:px-4">
+            <Title
+              section="Serviços"
+              title="Funcionalidades que irão destacar o seu negócio"
+              text="Em um ambiente tão competitivo como a internet, ter uma estratégia que destaque o seu negócio no ambiente digital é fundamental."
+              width="max-w-[500px]"
+            />
+            <ul className="max-sm:flex max-sm:flex-col sm:grid sm:grid-cols-4 sm:grid-rows-2 gap-8 mt-16">
+              {servicestext.map((item, key) => (
+                <li key={key} className={`${item.colSize} ${item.rowSize}`}>
+                  <CardTransparent extraCSS="rounded-lg overflow-hidden h-full">
+                    <div
+                      className={`flex py-8 px-6 items-start gap-10 justify-between h-full ${
+                        item.rowSize != "row-span-1" ? "flex-col" : "flex-row"
+                      }`}
+                    >
+                      <div className="flex flex-col items-start gap-4">
+                        <div className="bg-bg_dark p-4 rounded-lg text-xl">
+                          {item.icon}
+                        </div>
+                        <h4 className="text-2xl">{item.title}</h4>
+                        <p className="text-sm text-text">{item.text}</p>
                       </div>
-                      <h4 className="text-2xl">{item.title}</h4>
-                      <p className="text-sm text-text">{item.text}</p>
-                    </div>
 
-                    {item.image && <img src={item.image} alt="service img" className="rounded-lg" />}
-                  </div>
-                </CardTransparent>
-              </li>
-            ))}
-          </ul>
+                      {!isMobile && item.image && (
+                        <img
+                          src={item.image}
+                          alt="service img"
+                          className="rounded-lg"
+                        />
+                      )}
+                    </div>
+                  </CardTransparent>
+                </li>
+              ))}
+            </ul>
+          </div>
         </Container>
       </Section>
     </div>

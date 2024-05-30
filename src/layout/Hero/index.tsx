@@ -6,7 +6,7 @@ import { IoCheckmark } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-[680px] bg-[url('/src/assets/hero_bg_blur.png')] bg-auto bg-center-2-mobile sm:bg-center-2 bg-no-repeat overflow-x-hidden">
+    <div className="w-full min-h-[680px] bg-[url('/src/assets/hero_bg_blur.png')] bg-auto bg-center-2-mobile sm:bg-center-2 bg-no-repeat overflow-x-hidden pt-8">
       <Container>
         <div className="sm:grid sm:grid-cols-8 h-full mt-[80px] max-sm:px-4 max-sm:pb-12">
           <div className="sm:col-span-5 flex flex-col gap-14 max-sm:gap-6 justify-center">

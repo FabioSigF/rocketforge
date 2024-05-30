@@ -31,13 +31,13 @@ const Blog = () => {
   return (
     <div>
       <Container>
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-8 max-sm:px-4'>
           <Title 
             title="Artigos e notícias"
             section="Blog"
             position='center'
           />
-          <ul className='grid grid-cols-3 gap-8'>
+          <ul className='max-sm:flex max-sm:flex-col sm:grid sm:grid-cols-3 sm:gap-8 gap-10'>
             {blogContent.map((item, key) => (
               <article className='flex flex-col gap-4' key={key}>
                 <img src={item.image} alt={item.title} className='rounded-lg'/>

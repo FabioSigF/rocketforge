@@ -1,18 +1,15 @@
-import React from "react";
 import Container from "../../components/Container";
 import Title from "../../components/Title";
 import CardTransparent from "../../components/CardTransparent";
 import Button from "../../components/Button";
 import { CiCircleCheck } from "react-icons/ci";
 
-type Props = {};
-
-const Prices = (props: Props) => {
+const Prices = () => {
   return (
     <div>
       <Container>
-        <div className="grid grid-cols-3 gap-8">
-          <div className="flex flex-col justify-between gap-10">
+        <div className="sm:grid sm:grid-cols-3 sm:gap-8 max-sm:px-4">
+          <div className="flex flex-col justify-between gap-10 max-sm:mb-10">
             <Title
               title="Contrate um site profissional"
               section="Orçamento de site"
@@ -24,7 +21,7 @@ const Prices = (props: Props) => {
               </div>
             </CardTransparent>
           </div>
-          <div className="flex flex-col gap-8 py-8 px-6 bg-bg_dark border border-primary rounded-lg">
+          <div className="flex flex-col gap-8 py-8 px-6 bg-bg_dark border border-primary rounded-lg max-sm:mb-10">
             <h3 className="text-3xl mb-6">Site expresso</h3>
             <p>Site entregue em um período de 7 dias. É feito a partir de um dos nossos modelos de site.</p>
             <ul className="flex flex-col gap-4">
@@ -42,7 +39,7 @@ const Prices = (props: Props) => {
               </li>
             </ul>
             <div className="bg-primary rounded-lg text-white p-6 text-center">
-              <span className="text-6xl font-bold">R$ 399</span>
+              <span className="text-5xl sm:text-6xl font-bold">R$ 399</span>
               <p className="text-sm">Pagamento Único</p>
             </div>
           </div>
@@ -64,7 +61,7 @@ const Prices = (props: Props) => {
               </li>
             </ul>
             <div className="bg-white rounded-lg text-primary px-6 pt-7 pb-6 text-center flex flex-col gap-2">
-              <span className="text-5xl font-bold">Orçamento</span>
+              <span className="text-4xl sm:text-5xl font-bold">Orçamento</span>
               <p className="text-sm">Pagamento Único</p>
             </div>
           </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
   position?: "right" | "center" | "left";
   width?: string;
@@ -19,9 +17,9 @@ const Title = ({ position, width, section, title, text }: Props) => {
           : ""
       }`}
     >
-      <h2 className="text-2xl">{section}</h2>
-      <h3 className="text-5xl">{title}</h3>
-      {text && <p>{text}</p>}
+      <h2 className="text-xl sm:text-2xl">{section}</h2>
+      <h3 className="text-4xl sm:text-5xl">{title}</h3>
+      {text && <p className="max-sm:text-sm">{text}</p>}
     </div>
   );
 };

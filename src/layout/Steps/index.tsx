@@ -30,19 +30,19 @@ const Steps = () => {
     <div className="bg-[url('/src/assets/steps_bg.png')] bg-cover bg-no-repeat bg-center">
       <div className="bg-steps-linear pb-32">
         <Container>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center max-sm:px-4">
             <Title
               title="Como fazemos essa transformação?"
               section="Passo a passo"
               position="center"
             />
 
-            <div className="relative grid grid-rows-4 mt-32">
+            <div className="relative max-sm:flex max-sm:flex-col max-sm:gap-6 sm:grid sm:grid-rows-4 mt-8 sm:mt-32">
               {stepsCards.map((item, key) => (
-                <div className="grid grid-cols-2 w-full gap-14">
+                <div className="sm:grid sm:grid-cols-2 w-full gap-14">
                   {item.number % 2 == 0 && <div className="col-span-1"></div>}
                   <div
-                    className={`col-span-1 row-span-1 flex ${
+                    className={`sm:col-span-1 sm:row-span-1 flex ${
                       item.number % 2 == 0 ? "self-end" : "self-start"
                     }`}
                     key={key}
@@ -51,10 +51,10 @@ const Steps = () => {
                       0{item.number}
                     </div>
                     <div>
-                      <CardTransparent extraCSS="h-[120px] rounded-lg rounded-ss-none">
+                      <CardTransparent extraCSS="sm:h-[120px] rounded-lg rounded-ss-none">
                         <div className="flex flex-col justify-center px-6 py-4">
-                          <h4>{item.title}</h4>
-                          <p>{item.text}</p>
+                          <h4 className="max-sm:text-xl">{item.title}</h4>
+                          <p className="max-sm:text-sm">{item.text}</p>
                         </div>
                       </CardTransparent>
                     </div>
@@ -62,7 +62,7 @@ const Steps = () => {
                   {item.number % 2 != 0 && <div className="col-span-1"></div>}
                 </div>
               ))}
-              <div className="w-full h-full flex justify-center absolute -top-8">
+              <div className="max-sm:hidden w-full h-full flex justify-center absolute -top-8 ">
                 <div className="bg-[url('/src/assets/steps_union.png')] w-[16px] h-[545px] bg-no-repeat bg-cover mr-1"></div>
               </div>
             </div>

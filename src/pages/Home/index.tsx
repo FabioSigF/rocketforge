@@ -12,9 +12,7 @@ import Steps from "../../layout/Steps";
 const Home = () => {
   return (
     <div className="overflow-hidden">
-      <div className="max-sm:mb-8">
-        <Navbar />
-      </div>
+      <Navbar />
       <Hero />
       <div className="-mt-2 z-10">
         <BenefitsBar />
