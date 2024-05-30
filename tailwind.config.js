@@ -30,6 +30,7 @@ export default {
       }),
       backgroundPosition: {
         "center-2": "120% 20%",
+        "center-2-mobile": "60% 18%",
         "center_bottom": "center bottom"
       }
     },
